@@ -3,9 +3,12 @@ pipeline
 stages
 {
 stage('checkoutfromscm') {
+    steps{
     git 'https://github.com/dj19091999/pipeline_project.git'
+    }
 }
 stage('build') {
+    steps{
    bat label: '', script: '''cd
 cd C:\\dheerajcode\\jenkinproject
 "C:\\Program Files\\Git\\bin\\git.exe" log -1
@@ -18,6 +21,7 @@ dir
 dir hello*.c
 C:\\Dev-Cpp\\MinGW64\\bin\\gcc -o dheeraj hello.c
 dheeraj'''
+    }
 }
 }
 }
