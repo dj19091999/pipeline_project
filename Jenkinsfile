@@ -10,7 +10,7 @@ stage('checkoutfromscm') {
 }
 stage('build') {
     steps{
-   bat label: '', script: 'echo "dheeraj"'
+   echo 'dheeraj'
     }
 }
 }
